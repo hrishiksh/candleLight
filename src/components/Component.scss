@@ -1,0 +1,91 @@
+$blue-color: #7000ff;
+$green-color: #00b669;
+$red-light-color: #ff7f57;
+$grey-light-color: #e8e8e8;
+$text-color: #444444;
+
+.blue {
+  background-color: $blue-color;
+}
+
+.green {
+  background-color: $green-color;
+}
+
+.red {
+  background-color: $red-light-color;
+}
+
+.header {
+  &__logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &--img {
+      height: 3rem;
+    }
+    &--text {
+      font-size: 1.5rem;
+    }
+  }
+  &__item {
+  }
+}
+
+.infocard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  &--text {
+    font-size: 1rem;
+    color: white;
+    font-weight: normal;
+  }
+  &--percent {
+    font-size: 0.8rem;
+    color: white;
+  }
+  &--price {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.headline {
+  &__text {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.textfield {
+  height: 100%;
+  padding: 1rem 1.2rem;
+  outline: none;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: $grey-light-color;
+  font-family: inherit;
+  font-size: 1rem;
+  color: $text-color;
+}
+
+.btn {
+  border: none;
+  background-color: $green-color;
+  font: inherit;
+  font-size: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
