@@ -7,7 +7,7 @@ const Header = (props) => {
     <section className={"header " + props.styled}>
       <div className="header__logo">
         <img src={logo} alt="" className="header__logo--img" />
-        <h1 className="header__logo--text">Tradings</h1>
+        <h1 className="header__logo--text">CandleLamp</h1>
       </div>
 
       <nav className="header__item"></nav>
