@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/candleLight/static/css/main.16ac4bb8.chunk.css",
+    "main.js": "/candleLight/static/js/main.43abd6c2.chunk.js",
+    "main.js.map": "/candleLight/static/js/main.43abd6c2.chunk.js.map",
+    "runtime-main.js": "/candleLight/static/js/runtime-main.b7f839bd.js",
+    "runtime-main.js.map": "/candleLight/static/js/runtime-main.b7f839bd.js.map",
+    "static/js/2.6e53ba15.chunk.js": "/candleLight/static/js/2.6e53ba15.chunk.js",
+    "static/js/2.6e53ba15.chunk.js.map": "/candleLight/static/js/2.6e53ba15.chunk.js.map",
+    "index.html": "/candleLight/index.html",
+    "precache-manifest.0299699f081faf5e115dbf161e29d254.js": "/candleLight/precache-manifest.0299699f081faf5e115dbf161e29d254.js",
+    "service-worker.js": "/candleLight/service-worker.js",
+    "static/css/main.16ac4bb8.chunk.css.map": "/candleLight/static/css/main.16ac4bb8.chunk.css.map",
+    "static/js/2.6e53ba15.chunk.js.LICENSE.txt": "/candleLight/static/js/2.6e53ba15.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7f839bd.js",
+    "static/js/2.6e53ba15.chunk.js",
+    "static/css/main.16ac4bb8.chunk.css",
+    "static/js/main.43abd6c2.chunk.js"
+  ]
+}
