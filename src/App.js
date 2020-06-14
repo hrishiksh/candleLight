@@ -4,12 +4,16 @@ import Header from "./components/Header";
 import HeadLine from "./components/HeadLine";
 import TextField from "./components/TextField";
 import InfoCard from "./components/InfoCard";
+import Btn from "./components/Btn";
 
 function App() {
   const [price, setprice] = useState(0.0);
   const [target, settarget] = useState(0.0);
   const [stoploss, setstoploss] = useState(0.0);
   const [noOfStocks, setnoOfStocks] = useState(0.0);
+  const [longOrShort, setLongOrSort] = useState("Long");
+  const [profit, setprofit] = useState(0.0);
+  const [loss, setloss] = useState(0.0);
 
   const changePrice = (event) => {
     let newValue = parseFloat(event.target.value);
@@ -28,21 +32,34 @@ function App() {
     setnoOfStocks(newValue);
   };
 
-  let profit = (target - price) * noOfStocks;
-  let loss = (price - stoploss) * noOfStocks;
-  let profitPercent;
-  let lossPercent;
-  if (profitPercent === undefined && lossPercent === undefined) {
-    profitPercent = 0.0;
-    lossPercent = 0.0;
-  } else {
-    profitPercent = (profit / price) * 100;
-    lossPercent = (loss / price) * 100;
-  }
+  const ChangeLong = () => {
+    setLongOrSort("Long");
+  };
+
+  const ChangeShort = () => {
+    setLongOrSort("Short");
+  };
+
+  let profitPercent = (profit / price) * 100;
+  let lossPercent = (loss / price) * 100;
+
+  const grandCalculation = () => {
+    console.log("clicked");
+    if (longOrShort === "Long") {
+      setprofit((target - price) * noOfStocks);
+      setloss((price - stoploss) * noOfStocks);
+    } else {
+      setprofit((price - target) * noOfStocks);
+      setloss((stoploss - price) * noOfStocks);
+    }
+  };
+
+  console.log(profitPercent);
 
   return (
     <div className="homePage">
       <Header styled="homePage__header"></Header>
+
       <InfoCard
         title="Fund"
         percent="100"
@@ -52,15 +69,15 @@ function App() {
       ></InfoCard>
       <InfoCard
         title="Profit"
-        percent={profitPercent}
-        price={profit}
+        percent={profitPercent.toFixed(2)}
+        price={profit.toFixed(2)}
         bgcol="green"
         styled="homePage__card-2"
       ></InfoCard>
       <InfoCard
         title="Loss"
-        percent={lossPercent}
-        price={loss}
+        percent={lossPercent.toFixed(2)}
+        price={loss.toFixed(2)}
         bgcol="red"
         styled="homePage__card-3"
       ></InfoCard>
@@ -85,6 +102,19 @@ function App() {
         styled="homePage__textfield--4"
         onChange={changeNoOfStock}
       ></TextField>
+      <Btn styled="homePage__btn--up" bgcol="green" onClick={ChangeLong}>
+        Long
+      </Btn>
+      <Btn styled="homePage__btn--down" bgcol="red" onClick={ChangeShort}>
+        Short
+      </Btn>
+      <Btn
+        styled="homePage__btn--submit"
+        bgcol="green"
+        onClick={grandCalculation}
+      >
+        Submit
+      </Btn>
     </div>
   );
 }
