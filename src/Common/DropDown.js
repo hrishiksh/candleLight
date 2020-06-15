@@ -6,7 +6,13 @@ const DropDown = (props) => {
       <label htmlFor="dropdown" className="dropdown__label">
         Long/Short
       </label>
-      <select name="" id="dropdown" className="dropdown__select">
+      <select
+        name=""
+        id="dropdown"
+        className="dropdown__select"
+        onChange={props.onChange}
+        value={props.value}
+      >
         <option value="Long" className="dropdown__select--1">
           Long
         </option>

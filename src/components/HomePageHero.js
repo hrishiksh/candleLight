@@ -8,7 +8,7 @@ const HomePageHero = (props) => {
   return (
     <section className={"HomePageHero " + props.styled}>
       <Headline>Trade Calculator</Headline>
-      <Subtitle>Calculate your P/L with brockrage charges</Subtitle>
+      <Subtitle>Calculate your P&L with brockrage charges</Subtitle>
       <img src={heroImg} alt="" className="HomePageHero__SvgContainer" />
     </section>
   );
