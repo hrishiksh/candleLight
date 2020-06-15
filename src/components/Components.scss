@@ -1,0 +1,28 @@
+.HomePageHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.result {
+  background-color: var(--accent-color);
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 2rem;
+  &__title {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  &__number {
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__profit {
+    margin-bottom: 1rem;
+  }
+}

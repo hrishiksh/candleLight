@@ -6,7 +6,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-dark: #204051;
+  --background-input-dark: #20465a;
+  --text-color-dark: #ffffff;
+  --accent-color: #68f4ff;
+}
+
 body {
   font-size: 62.5%;
   font-family: "Poppins", sans-serif;
+  background-color: var(--background-dark);
 }
